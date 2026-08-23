@@ -2,7 +2,12 @@
 dist/
 tools/
 node_modules/
+spec/
 story/shared/marx-quotes.gen.twee
+
+# python
+__pycache__/
+*.pyc
 
 # vim
 *.swp
