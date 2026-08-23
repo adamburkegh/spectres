@@ -11,9 +11,8 @@
 		<<set _marxQuotes to JSON.parse(Story.get("Marx Quotes").text).quotes>>
 		<<set _marxQuote to _marxQuotes[Math.floor(Math.random() * _marxQuotes.length)]>>
 		<div class="marx-ghost">
-			<p><em>A chill passes through the room. A bearded spectre flickers into being.</em></p>
+			<p><em>A chill passes through the room. A bearded spectre flickers into being. You think you hear it say ...</em></p>
 			<p>"<<= _marxQuote>>"</p>
-			<p class="marx-ghost-attrib">&mdash; the ghost of Karl Marx</p>
 		</div>
 	<</if>>
 <</widget>>
