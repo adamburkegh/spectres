@@ -1,0 +1,10 @@
+:: StoryData
+{
+  "ifid": "1D4C85E2-1F43-452F-BC04-5E29EB06F5F9",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "The Gates of Elsinore",
+  "tag-colors": {
+    "castle": "gray"
+  }
+}

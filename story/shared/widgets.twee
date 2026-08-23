@@ -1,0 +1,12 @@
+:: Widgets [widget]
+/*
+	Reusable macros/widgets, shared by every area. Add new <<widget>>
+	definitions here (or add another [widget]-tagged passage if this file
+	gets big — SugarCube merges all of them).
+*/
+
+<<widget "note">>
+	<div class="note">
+		<<= $args[0]>>
+	</div>
+<</widget>>

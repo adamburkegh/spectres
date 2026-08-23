@@ -1,0 +1,25 @@
+:: Stylesheet [stylesheet]
+/*
+	Global styles. Keep this file thin — if a style only applies to one
+	area, put it in that area's file instead (SugarCube concatenates every
+	[stylesheet]-tagged passage, so you can add more stylesheet passages
+	per-area rather than fighting over this one).
+*/
+
+:root {
+	--color-bg: #0e0e10;
+	--color-text: #e6e6e6;
+	--color-accent: #8a5cf6;
+}
+
+body {
+	background-color: var(--color-bg);
+}
+
+#story {
+	max-width: 700px;
+}
+
+a.link-internal {
+	color: var(--color-accent);
+}

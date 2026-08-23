@@ -1,0 +1,16 @@
+:: The Gates of Elsinore [castle]
+
+You stand at the gates of Elsinore Castle. A voice calls "Who's there?"
+
+<<if $gateOpen>>
+	The gates stand open.
+
+	[[Enter the castle->Castle Courtyard]]
+<<else>>
+	The gates are shut fast.
+
+	<<link "Knock">>
+		<<set $gateOpen to true>>
+		<<goto "The Gates of Elsinore">>
+	<</link>>
+<</if>>

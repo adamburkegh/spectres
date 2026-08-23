@@ -1,0 +1,15 @@
+:: Script [script]
+/*
+	Global startup JavaScript. Same rule as the stylesheet: this file is
+	for genuinely global setup (e.g. defining $config, seeding State
+	variables). Area- or feature-specific JS should live next to the
+	passages it supports, tagged [script], and SugarCube will concatenate
+	it in automatically.
+*/
+
+/*
+	This is also where later "fun with the web platform" experiments hook
+	in — e.g. registering a Service Worker, wiring up the Web Audio API,
+	or reading/writing extra localStorage keys alongside SugarCube's own
+	save system.
+*/
