@@ -2,3 +2,4 @@
 /% Default values for story variables, so they exist even if a save is loaded
    directly into a passage that reads them before it's set them itself. %/
 <<set $gateOpen to true>>
+<<set $marx to true>>

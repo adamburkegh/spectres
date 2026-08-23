@@ -1,0 +1,27 @@
+# Source data for the Marx's Ghost mechanic (see marx.twee).
+# One quote per line. Blank lines and lines starting with # are ignored.
+# Public domain (Marx died 1883). Source: marxists.org.
+#
+# This file is NOT compiled directly by Tweego (plain .txt, not .twee).
+# build.sh/build.ps1 turn it into story/shared/marx-quotes.gen.twee (JSON,
+# gitignored, regenerated every build) before running Tweego.
+
+# Capital, Volume 1, Chapter 1
+A commodity is, in the first place, an object outside us, a thing that by its properties satisfies human wants of some sort or another.
+A commodity appears, at first sight, a very trivial thing, and easily understood. Its analysis shows that it is, in reality, a very queer thing, abounding in metaphysical subtleties and theological niceties.
+The labour time socially necessary is that required to produce an article under the normal conditions of production, and with the average degree of skill and intensity prevalent at the time.
+
+# Capital, Volume 1, Chapter 10
+Capital is dead labour, that, vampire-like, only lives by sucking living labour, and lives the more, the more labour it sucks.
+The working-day is thus not a constant, but a variable quantity.
+Between equal rights force decides.
+If the labourer consumes his disposable time for himself, he robs the capitalist.
+
+# Capital, Volume 1, Chapter 32
+One capitalist always kills many.
+The knell of capitalist private property sounds. The expropriators are expropriated.
+Capitalist production begets, with the inexorability of a law of Nature, its own negation.
+
+# Capital, Volume 2, Chapter 1
+The capitalist cannot resell the laborer as a commodity because he is not his chattel slave and the capitalist has not bought anything except the right to use his labour-power for a certain time.
+It is only by virtue of being the product of this process that the mass of commodities becomes commodity-capital, the bearer of the expanded capital-value.

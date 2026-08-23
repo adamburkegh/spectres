@@ -2,6 +2,7 @@
 dist/
 tools/
 node_modules/
+story/shared/marx-quotes.gen.twee
 
 # vim
 *.swp
