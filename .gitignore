@@ -1,0 +1,8 @@
+# project
+dist/
+tools/
+node_modules/
+
+# vim
+*.swp
+
