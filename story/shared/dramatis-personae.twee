@@ -1,0 +1,24 @@
+:: Dramatis Personae Data [script]
+/*
+	Character key -> { display, target }. "target" that looks like a URL
+	renders as an external link (new tab, via SugarCube's own
+	external-link detection); anything else is treated as a passage name
+	for a local bio passage. Add new characters here.
+*/
+setup.characters = {
+	"Marx": { display: "Karl Marx", target: "https://en.wikipedia.org/wiki/Karl_Marx" },
+	"Fukuyama": { display: "Francis Fukuyama", target: "https://en.wikipedia.org/wiki/Francis_Fukuyama" }
+};
+
+:: Dramatis Personae Widget [widget]
+/% <<character "Key">> looks "Key" up in setup.characters and links its
+   display name to a local bio passage or an external page, whichever is
+   configured. Falls back to the raw key as plain text if not found. %/
+<<widget "character">>\
+<<if setup.characters.hasOwnProperty($args[0])>>\
+<<set _character to setup.characters[$args[0]]>>\
+[[_character.display->_character.target]]\
+<<else>>\
+<<= $args[0]>>\
+<</if>>\
+<</widget>>
