@@ -1,8 +1,10 @@
 # project
 dist/
+refs/
 tools/
 node_modules/
 spec/
+var/
 story/shared/marx-quotes.gen.twee
 
 # python
