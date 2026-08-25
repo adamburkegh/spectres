@@ -26,7 +26,13 @@ OUT_PATH = Path(__file__).parent.parent / "marx-quotes.txt"
 MIN_WORDS = 8
 MAX_WORDS = 35
 
-SENTENCE_RE = re.compile(r"[^.!?]*[.!?]")
+# A [.!?] only counts as a sentence end if followed by whitespace + a
+# capital/quote char, or by the end of the text -- NOT if immediately
+# followed by a lowercase letter or other punctuation with no space.
+# That's what distinguishes a real sentence end from an abbreviation's
+# internal period, e.g. "i.e.," -- neither period there is followed by
+# whitespace-then-capital, so both are correctly skipped.
+SENTENCE_END_RE = re.compile(r'[.!?](?=\s+[A-Z"‘’“”]|\s*$)')
 # Runs of 2+ periods (with or without spaces between, e.g. "..." or ". . .")
 # mark omitted material in the source text, not a sentence end -- treat them
 # as a hard break so the sentence regex above doesn't stop at their first dot.
@@ -66,7 +72,10 @@ def looks_quotable(sentence: str) -> bool:
 def extract_sentences(paragraph: str) -> list[str]:
     sentences = []
     for chunk in ELLIPSIS_RE.split(paragraph):
-        sentences.extend(m.group().strip() for m in SENTENCE_RE.finditer(chunk))
+        start = 0
+        for m in SENTENCE_END_RE.finditer(chunk):
+            sentences.append(chunk[start:m.end()].strip())
+            start = m.end()
     return sentences
 
 
